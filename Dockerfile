@@ -16,4 +16,4 @@ RUN cd ${LAMBDA_TASK_ROOT} && poetry install --no-interaction --no-ansi --no-roo
 
 COPY ./ ${LAMBDA_TASK_ROOT}/
 
-CMD ["src/main.handler"]
+CMD ["src.main.handler"]
