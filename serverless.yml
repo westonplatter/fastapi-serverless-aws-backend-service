@@ -43,7 +43,6 @@ provider:
   memorySize: 1024 # MB
   timeout: 30
   endpointType: edge
-  lambdaHashingVersion: 20201221
   # apiGateway:
   #   metrics: true
   tracing:
