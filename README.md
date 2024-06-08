@@ -96,6 +96,7 @@ Test it </br>
 - Next time you will deploy the server will be exposed under your domain.
 
 9. Deploy to AWS
+Note - if you are building the docker image from a mac, change `architecture: x86_64` to `architecture: arm64` in the `serverless.yml` file.
 ```
 ./scripts/deploy
 ```

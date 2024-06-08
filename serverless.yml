@@ -80,6 +80,8 @@ functions:
   app:
     image:
       name: fastapi-backend-server
+    architecture: x86_64 # default
+    # architecture: arm64 # works for docker images built on Mac M1/M2/M3/etc machines
     environment:
       STAGE: ${self:provider.stage}
 
