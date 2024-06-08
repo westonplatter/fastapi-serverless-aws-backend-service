@@ -15,5 +15,6 @@ COPY poetry.lock pyproject.toml ${LAMBDA_TASK_ROOT}/
 RUN cd ${LAMBDA_TASK_ROOT} && poetry install --no-interaction --no-ansi --no-root --only main
 
 COPY ./ ${LAMBDA_TASK_ROOT}/
+ENV PYTHONPATH "${PYTHONPATH}:${LAMBDA_TASK_ROOT}"
 
 CMD ["src.main.handler"]
