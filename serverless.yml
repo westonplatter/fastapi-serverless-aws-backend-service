@@ -59,6 +59,8 @@ provider:
         cacheFrom:
           # This is the path where the serverless framework will put the image in ECR when created for the first time.
           - ${AWS::AccountId}.dkr.ecr.${self:provider.region}.amazonaws.com/serverless-fastapibackendservice-${self:provider.stage}:fastapi-backend-server
+        # build container to match the architecture: x86_64 param
+        platform: linux/amd64
   iamRoleStatements:  # handles the permissions of the lambda
     # XRay
     - Effect: Allow
